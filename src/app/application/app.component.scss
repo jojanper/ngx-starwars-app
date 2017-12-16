@@ -1,0 +1,16 @@
+// styles applied on :host are applied on the current component, "app" in this case
+:host {
+  display: block;
+}
+
+main {
+  display: block;
+}
+
+#container {
+  padding:100px 20px 100px 20px;
+
+  h1 {
+    text-align: center;
+  }
+}

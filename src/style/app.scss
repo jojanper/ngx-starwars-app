@@ -1,0 +1,72 @@
+// styles in src/style directory are applied to the whole page
+@import "./chosen.scss";
+
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-family: Georgia, Serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.chosen-default span {
+    color: #777777;
+}
+
+.chosen-container {
+    font-size: inherit;
+}
+
+.chosen-container-multi, .chosen-container-multi .search-field input {
+  cursor: pointer;
+}
+
+.chosen-container-multi .chosen-choices {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.chosen-container-active2 .chosen-choices {
+    border: inherit;
+    box-shadow: inherit;
+}
+
+dng2-select-input {
+  color: #464a4c;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+dng2-form-input label {
+  font-weight: 700;
+}
+
+.dataTables_paginate .disabled {
+  cursor: not-allowed;
+}
+
+.custom-control-description {
+  color: #464a4c;
+  margin-top: 2px;
+}
+
+.modal {
+  z-index: 10500;
+}
+
+.modal-content {
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+}
+
+.modal-backdrop {
+  z-index: 10400;
+}
+
+// We do custom validation and need to override the default display value
+.invalid-feedback {
+  display: block !important;
+}

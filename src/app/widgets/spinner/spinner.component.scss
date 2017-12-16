@@ -1,0 +1,43 @@
+$rcolor: 195;
+$gcolor: 30;
+$bcolor: 30;
+$animation: rotation .6s infinite linear;
+
+@mixin spinner-border($width: 6px, $alpha: 0.15) {
+    border-left: $width solid rgba($rcolor, $gcolor, $bcolor, $alpha);
+    border-right: $width solid rgba($rcolor, $gcolor, $bcolor, $alpha);
+    border-bottom: $width solid rgba($rcolor, $gcolor, $bcolor, $alpha);
+    border-top: $width solid rgba($rcolor, $gcolor, $bcolor, .8);
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(359deg);}
+}
+
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+}
+
+@mixin spinner($width, $alpha, $scale: 1.0) {
+    transform: scale($scale);
+    div {
+        @include spinner-border($width, $alpha);
+        height: 60px;
+        width: 60px;
+        margin: 0px auto;
+        position: relative;
+        -webkit-animation: $animation;
+        animation: $animation;
+        border-radius: 100%;
+    }
+}
+
+.spinner-1 {
+    @include spinner(6px, 0.15);
+}
+
+.spinner-2 {
+    @include spinner(6px, 0, 0.75);
+}
