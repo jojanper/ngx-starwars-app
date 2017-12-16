@@ -143,7 +143,7 @@ export const AppObservableArrayModes = {
  */
 export abstract class AppObservableArray<T> extends BaseObservableArray<T> {
     /**
-     * @param initMode Initialization mode. the following modes are supported:
+     * @param initMode Initialization mode, the following modes are supported:
      *  - empty: array of objects is initialized as empty list
      *  - persistent: array of objects is available also to late subscriptions
      */
