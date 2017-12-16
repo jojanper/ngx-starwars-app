@@ -1,4 +1,4 @@
-import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent, PlanetsComponent, SpeciesDetailComponent } from './index';
 import { RouteManager } from '../router';
@@ -8,10 +8,7 @@ import { AppEmptyViewComponent } from '../widgets';
 const appRoutes = RouteManager.ROUTES;
 
 /**
- * Application routes, some of the routes are lazy loaded.
- *
- * Reference to lazy loaded pages:
- * https://toddmotto.com/lazy-loading-angular-code-splitting-webpack
+ * Application routes.
  */
 const routes: Routes = [
     {path: appRoutes['home'].url, component: HomeComponent},
@@ -23,8 +20,5 @@ const routes: Routes = [
 ];
 
 export const DraalAppRoutes = RouterModule.forRoot(routes, {
-    useHash: true,
-
-    // Once bootstrapped, fetch all the remaining module chunks
-    preloadingStrategy: PreloadAllModules
+    useHash: true
 });
